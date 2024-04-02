@@ -13,7 +13,7 @@ st.set_page_config(
    page_icon='⚛️',  # You can use an emoji or a path to an image file
 )
 
-st.title('Schrodinger-AI -- Using Nothing!'   #Using Google\'s Gemma 2B')
+st.title('Schrodinger-AI -- Using Nothing!')   #Using Google\'s Gemma 2B')
 st.text('I am Schrodinger back to life! hehe...')
 st.image('./head.png')
 link = 'https://www.linkedin.com/in/chao-fan-818667245/'
