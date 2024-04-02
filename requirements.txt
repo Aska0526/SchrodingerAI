@@ -4,3 +4,4 @@ transformers==4.37.2
 streamlit
 chromadb
 pysqlite3-binary
+sentence_transformers
