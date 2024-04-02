@@ -2,3 +2,4 @@ datasets==2.18.0
 torch==2.1.1
 transformers==4.37.2
 streamlit
+chromadb
