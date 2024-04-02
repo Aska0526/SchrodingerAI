@@ -1,3 +1,6 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from datasets import load_dataset
 import streamlit as st
 from Gemma2BInstructModel import Gemma2BInstructModel
@@ -10,7 +13,7 @@ st.set_page_config(
    page_icon='⚛️',  # You can use an emoji or a path to an image file
 )
 
-st.title('Schrodinger-AI -- Using Google\'s Gemma 2B')
+st.title('Schrodinger-AI -- Using Nothing!'   #Using Google\'s Gemma 2B')
 st.text('I am Schrodinger back to life! hehe...')
 st.image('./head.png')
 link = 'https://www.linkedin.com/in/chao-fan-818667245/'
@@ -28,7 +31,7 @@ vector_store = VectorStore("quantum-mechanics-knowledge-base")
  # Assuming closed_qa_dataset is defined and available
 vector_store.populate_vectors(closed_qa_dataset)
 
-gemma_model = Gemma2BInstructModel()
+#gemma_model = Gemma2BInstructModel()
 
 ###################################################################################
 
@@ -39,8 +42,8 @@ def get_response(prompt:str):
     # Extract the context text from the response
     # The context is assumed to be in the first element of the 'context' key
     context = "".join(context_response['documents'][0])
-    print(context)
-    return gemma_model.generate_answer(prompt,context=context)
+    return(context)
+    #return gemma_model.generate_answer(prompt,context=context)
 
 #####################################################################################
 # User input
